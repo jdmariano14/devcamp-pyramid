@@ -33,7 +33,7 @@
 
 <% if @member.recruits.count > 0 %>
   <hr>
-  <p><strong><%= link_to "Add Recruits", recruit_path(@member) %></strong></p>
+  <p><strong>Recruits <%= link_to "(add recruit)", recruit_path(@member) %></strong></p>
   <hr>
   <%= render 'member_listing', members: @member.recruits %>
 <% end %>
