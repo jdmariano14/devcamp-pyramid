@@ -1,7 +1,4 @@
-FactoryGirl.define do  factory :recruitment do
-    
-  end
-
+FactoryGirl.define do
   factory :member do
     name "Peer Amid"
     age 21
