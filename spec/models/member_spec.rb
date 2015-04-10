@@ -22,4 +22,9 @@ RSpec.describe Member, type: :model do
   	it { should_not be_valid }
   end
 
+  describe "when money is negative" do
+  	before { @member.money = -1.1 }
+  	it { should_not be_valid }
+  end
+
 end
