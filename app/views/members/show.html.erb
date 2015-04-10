@@ -20,5 +20,12 @@
   <%= @member.money %>
 </p>
 
+<% if @member.recruits.count > 0 %>
+  <hr>
+  <p><strong>Add recruits</strong></p>
+  <hr>
+  <%= render 'member_listing', members: @member.recruits %>
+<% end %>
+
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
