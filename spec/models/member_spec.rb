@@ -9,6 +9,7 @@ RSpec.describe Member, type: :model do
   it { should respond_to(:age) }
   it { should respond_to(:company) }
   it { should respond_to(:money) }
+  it { should respond_to(:recruiter) }
 
   it { should be_valid }
 
