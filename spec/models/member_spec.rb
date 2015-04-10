@@ -29,4 +29,9 @@ RSpec.describe Member, type: :model do
   	it { should_not be_valid }
   end
 
+  describe "when adding a new recruit" do
+    before { @recruit = @member.recruits.build }
+    expect(@recruit).not_to be(nil)
+  end
+
 end
