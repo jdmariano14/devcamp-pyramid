@@ -1,0 +1,13 @@
+<h1>Give Money to <%= @member.name %></h1>
+
+<%= form_tag(controller: "members", action: "pay_update", method: "put", class: "pay_form") do %>
+  <%= label_tag "Amount" %>
+  <%= text_field_tag :amount %>
+  <br>
+  <br>
+  <%= submit_tag %>
+<% end %>
+
+<br>
+<%= link_to 'Show', @member %> |
+<%= link_to 'Back', members_path %>

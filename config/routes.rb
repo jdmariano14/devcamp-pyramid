@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :members
   get 'members/:id/recruit' => 'members#recruit', as: :recruit
+  get 'members/:id/pay' => 'members#pay', as: :pay
+  post 'members/:id/pay' => 'members#pay_update', as: :pay_update
 
 
   # The priority is based upon order of creation: first created -> highest priority.

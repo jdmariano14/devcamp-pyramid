@@ -26,6 +26,11 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+  end 
+
+  # GET /members/1/pay
+  def pay
+    @member = Member.find(params[:id])
   end
 
   # POST /members
@@ -55,6 +60,17 @@ class MembersController < ApplicationController
         format.html { render :edit }
         format.json { render json: @member.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # POST /members/1/pay
+  def pay_update
+    @member = Member.find(params[:id])
+    @member.money += params[:amount].to_f
+    if @member.save
+      redirect_to @member, notice: 'Member was successfully paid.'
+    else
+      render :pay
     end
   end
 

@@ -22,6 +22,9 @@
 <p>
   <strong>Money:</strong>
   <%= @member.money %>
+  <% unless @member.id == 1 %>
+    <%= link_to "(give money)", pay_path(@member) %>
+  <% end %>
 </p>
 
 <% if @member.recruiter %>
