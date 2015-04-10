@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
+<p><strong>Profile</strong>
+  	<%= link_to "(edit)", edit_member_path(@member) %></p>
+
 <p>
   <strong>Name:</strong>
   <%= @member.name %>
@@ -27,5 +31,4 @@
   <%= render 'member_listing', members: @member.recruits %>
 <% end %>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
