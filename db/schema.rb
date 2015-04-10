@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410194019) do
+ActiveRecord::Schema.define(version: 20150410200002) do
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
     t.string   "company"
-    t.decimal  "money"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "money",      precision: 9, scale: 2
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
 end
