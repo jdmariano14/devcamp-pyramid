@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factor :member do
+  factory :member do
     name "Peer Amid"
     age 21
     company "Peer Money Distribution"
