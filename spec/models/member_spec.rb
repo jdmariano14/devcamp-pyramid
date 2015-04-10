@@ -17,4 +17,9 @@ RSpec.describe Member, type: :model do
   	it { should_not be_valid }
   end
 
+  describe "when name is too long" do
+  	before { @member.name = "a" * (Member::NAME_MAX_LENGTH + 1) }
+  	it { should_not be_valid }
+  end
+
 end
