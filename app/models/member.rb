@@ -1,3 +1,3 @@
 class Member < ActiveRecord::Base
-  # udo
+  validates :name, :presence => true
 end
