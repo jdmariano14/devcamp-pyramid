@@ -36,6 +36,10 @@ RSpec.describe Member, type: :model do
     it "should not be nil" do
       expect(@recruit).not_to be(nil)
     end
+
+    it "should know its recruiter" do
+      expect(@recruit.recruiter_id).to eq(@member.id)
+    end
   end
 
 end
