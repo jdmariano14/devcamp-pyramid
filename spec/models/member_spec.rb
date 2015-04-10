@@ -31,7 +31,11 @@ RSpec.describe Member, type: :model do
 
   describe "when adding a new recruit" do
     before { @recruit = @member.recruits.build }
-    expect(@recruit).not_to be(nil)
+    subject { @recruit }
+
+    it "should not be nil" do
+      expect(@recruit).not_to be(nil)
+    end
   end
 
 end
