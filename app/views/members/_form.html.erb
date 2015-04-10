@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <% if @recruiter %>
+    <%= hidden_field_tag("member[recruiter_id]", @recruiter.id.to_s) %>
+  <% end %>
+  <%= hidden_field_tag("member[money]", "0") %>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -23,10 +28,12 @@
     <%= f.label :company %><br>
     <%= f.text_field :company %>
   </div>
-  <div class="field">
-    <%= f.label :money %><br>
-    <%= f.text_field :money %>
-  </div>
+  <% if @member.id == 1 %>
+    <div class="field">
+      <%= f.label :money %><br>
+      <%= f.text_field :money %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

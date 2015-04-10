@@ -24,9 +24,13 @@
   <%= @member.money %>
 </p>
 
+<% if @member.recruiter %>
+  <p><strong>Recruiter:</strong> <%= @member.recruiter.name %></p>
+<% end %>
+
 <% if @member.recruits.count > 0 %>
   <hr>
-  <p><strong>Add recruits</strong></p>
+  <p><strong><%= link_to "Add Recruits", recruit_path(@member) %></strong></p>
   <hr>
   <%= render 'member_listing', members: @member.recruits %>
 <% end %>

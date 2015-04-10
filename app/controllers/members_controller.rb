@@ -15,6 +15,13 @@ class MembersController < ApplicationController
   # GET /members/new
   def new
     @member = Member.new
+    @recruiter = Member.first
+  end
+
+  # GET /members/1/recruit
+  def recruit
+    @member = Member.new
+    @recruiter = Member.find(params[:id])
   end
 
   # GET /members/1/edit
@@ -69,6 +76,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :age, :company, :money)
+      params.require(:member).permit(:name, :age, :company, :money, :recruiter_id)
     end
 end
