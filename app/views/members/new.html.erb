@@ -1,5 +1,10 @@
-<h1>New Recruit for <%= @recruiter.name %></h1>
-
-<%= render 'form' %>
+<section class="section appear clearfix">
+	<h1>New Recruit for <%= @recruiter.name %></h1>
+	<div class="container">
+		<div class="row mar-bot40">
+			<%= render 'form' %>
+		</div>
+	</div>
+</section>
 
 <%= link_to 'Back', members_path %>

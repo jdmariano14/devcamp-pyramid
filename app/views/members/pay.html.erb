@@ -1,13 +1,22 @@
-<h1>Give Money to <%= @member.name %></h1>
+<section class="section appear clearfix">
+	<div class="container">
+		<div class="row mar-bot40">
+			<h1>Give Money to <%= @member.name %></h1>
 
-<%= form_tag(controller: "members", action: "pay_update", method: "put", class: "pay_form") do %>
-  <%= label_tag "Amount" %>
-  <%= text_field_tag :amount %>
-  <br>
-  <br>
-  <%= submit_tag %>
-<% end %>
+			<%= form_tag(controller: "members", action: "pay_update", method: "put", class: "pay_form") do %>
+			  <%= label_tag "Amount" %>
+			  <%= text_field_tag :amount %>
+			  <br>
+			  <br>
+			  <%= submit_tag %>
+			<% end %>
 
-<br>
-<%= link_to 'Show', @member %> |
-<%= link_to 'Back', members_path %>
+			<br>
+			<%= link_to 'Show', @member %> |
+			<%= link_to 'Back', members_path %>
+		</div>
+	</div>
+</section>
+
+
+
